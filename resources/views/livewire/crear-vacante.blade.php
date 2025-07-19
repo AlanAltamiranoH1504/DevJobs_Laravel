@@ -5,15 +5,21 @@
         <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
     </div>
     <div>
-        <x-input-label for="salario" :value="__('Salario Mensuale:')" />
+        <x-input-label for="salario" :value="__('Salario Mensual:')" />
         <select id="salario" name="salario" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full font-orbitron">
-            <option value=""> --- Selecciona un tipo de Cuenta ---</option>
+            <option value=""> --- Selecciona un salario ---</option>
+            @foreach($salarios as $salario)
+                <option class="w-full" value="{{$salario->id}}">{{$salario->salario}}</option>
+            @endforeach
         </select>
     </div>
     <div>
         <x-input-label for="categoria" :value="__('Categoria:')" />
         <select id="categoria" name="categoria" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full font-orbitron">
-            <option value=""> --- Selecciona un tipo de Cuenta ---</option>
+            <option value=""> --- Selecciona una categoria ---</option>
+            @foreach($categorias as $categoria)
+                <option value="{{$categoria->id}}">{{$categoria->categoria}}</option>
+            @endforeach
         </select>
     </div>
     <div>
