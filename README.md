@@ -1,66 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 DevJobs - Plataforma de Empleos con Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**DevJobs** es una plataforma web desarrollada con **Laravel**, que conecta a empleadores con candidatos. Los empleadores pueden publicar vacantes y los candidatos pueden crear perfiles y postularse a ofertas laborales.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🎯 Características
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 📄 **Publicación de Vacantes**  
+  Empleadores pueden crear, editar y eliminar vacantes detalladas (título, descripción, requisitos, salario, etc.).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 👤 **Gestión de Perfiles**  
+  Candidatos y empleadores pueden registrarse, iniciar sesión y administrar sus perfiles.
 
-## Learning Laravel
+- 📝 **Postulación a Vacantes**  
+  Candidatos pueden postularse directamente a través del sistema, y los empleadores pueden revisar los postulantes.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- 📊 **Panel Administrativo**  
+  Gestión de vacantes, postulaciones y usuarios según el rol.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- 🔎 **Búsqueda y Filtros**  
+  Filtros dinámicos por título, ubicación, categoría, salario, etc., con actualización en tiempo real usando Livewire.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🧰 Tecnologías Utilizadas
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- ⚙️ **Laravel** – Framework PHP moderno y robusto.
+- ⚡ **Livewire** – Interactividad sin JavaScript.
+- 🗃️ **MySQL** – Base de datos relacional para manejar toda la información.
+- 🖼️ **Blade** – Motor de plantillas para las vistas.
+- 🎨 **Tailwind CSS** – Framework CSS utilitario.
+- 🗃️ **MySQL** – Base de datos relacional.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 💻 Requisitos del Sistema
 
-## Contributing
+- PHP >= 8.1
+- Composer
+- MySQL o MariaDB
+- Node.js y NPM
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🚧 Estado del Proyecto
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+> **Este proyecto se encuentra actualmente en desarrollo.**  
+> Algunas funcionalidades pueden estar incompletas o sujetas a cambios.  
+> No se recomienda su uso en entornos de producción hasta alcanzar una versión estable.
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## ⚙️ Instalación
 
-## License
+```bash
+# Clonar el repositorio
+git clone https://github.com/tuusuario/devjobs-laravel.git
+cd devjobs-laravel
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Instalar dependencias de PHP
+composer install
+
+# Configurar entorno
+cp .env.example .env
+php artisan key:generate
+
+# Configurar base de datos en .env y luego ejecutar:
+php artisan migrate --seed
+
+# Instalar dependencias front-end
+npm install && npm run dev
+
+# Iniciar servidor de desarrollo
+php artisan serve
