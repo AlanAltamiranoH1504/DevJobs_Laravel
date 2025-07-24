@@ -20,6 +20,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware("auth")->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\VacanteController::class, "index"])->name('dashboard');
     Route::get('/vacantes/create', [\App\Http\Controllers\VacanteController::class, "create"])->name("vacantes.create");
+    Route::get("/vacantes/{id}/edit", [\App\Http\Controllers\VacanteController::class, "edit"])->name("vacantes.edit");
 });
 
 require __DIR__.'/auth.php';

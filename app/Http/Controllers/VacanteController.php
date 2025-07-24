@@ -42,9 +42,15 @@ class VacanteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Vacante $vacante)
+    public function edit($vacante)
     {
-        //
+        $vacante = Vacante::where([
+            "id" => $vacante,
+            "user_id" => auth()->user()->id
+        ])->first();
+        return view("vacantes.edit", [
+            "vacante" => $vacante
+        ]);
     }
 
     /**

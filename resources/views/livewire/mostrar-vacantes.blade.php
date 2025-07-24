@@ -21,7 +21,7 @@
                             </svg>
                             Candidatos
                         </a>
-                        <a href="#"
+                        <a href="{{route('vacantes.edit', $vacante->id)}}"
                            class="bg-blue-800 py-2 px-4 rounded-lg text-white text-xs font-bold uppercase flex justify-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                  stroke="currentColor" class="size-6">
