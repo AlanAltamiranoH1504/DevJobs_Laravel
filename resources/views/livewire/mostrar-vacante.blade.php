@@ -33,7 +33,9 @@
 
     <div class="mt-5 bg-gray-50 border border-dashed p-5 text-center rounded-md">
         @auth()
-
+            @if(auth()->user()->rol === 1)
+                <livewire:postular-vacante :vacante="$vacante"></livewire:postular-vacante>
+            @endif
         @endauth
 
         @guest()
