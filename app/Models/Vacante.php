@@ -19,4 +19,16 @@ class Vacante extends Model
         "publicado",
         "user_id"
     ];
+
+    //Un vacante pertenece a una categoria
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class, "categoria_id", "id");
+    }
+
+    //Una vacante pertenece a un salario
+    public function salario()
+    {
+        return $this->belongsTo(Salario::class, "salario_id", "id");
+    }
 }

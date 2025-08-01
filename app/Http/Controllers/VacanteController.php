@@ -30,9 +30,14 @@ class VacanteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vacante $vacante)
+    public function show($vacante)
     {
-        //
+        $vacante = Vacante::where([
+            "id" => $vacante
+        ])->first();
+        return view("vacantes.show", [
+            "vacante" => $vacante
+        ]);
     }
 
     /**
@@ -42,10 +47,6 @@ class VacanteController extends Controller
     {
         $vacante = Vacante::findOrFail($vacante);
         $this->authorize("update", $vacante);
-//        $vacante = Vacante::where([
-//            "id" => $vacante,
-//            "user_id" => auth()->user()->id
-//        ])->first();
         return view("vacantes.edit", [
             "vacante" => $vacante
         ]);

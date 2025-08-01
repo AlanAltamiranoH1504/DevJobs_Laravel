@@ -23,4 +23,7 @@ Route::middleware("auth")->group(function () {
     Route::get("/vacantes/{id}/edit", [\App\Http\Controllers\VacanteController::class, "edit"])->name("vacantes.edit");
 });
 
+//Rutas no protegidas para vacante
+Route::get("/vacantes/{id}", [\App\Http\Controllers\VacanteController::class, "show"])->name("vacantes.show");
+
 require __DIR__.'/auth.php';

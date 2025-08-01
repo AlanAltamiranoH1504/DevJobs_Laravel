@@ -4,7 +4,7 @@
             @foreach($vacantes as $vacante)
                 <div class="p-6 text-gray-900 border border-gray-200 md:flex md:justify-between md:items-center">
                     <div class="leading-10">
-                        <a href="#" class="text-xl font-bold">
+                        <a href="/vacantes/{{$vacante->id}}" class="text-xl font-bold">
                             {{$vacante->titulo}}
                         </a>
                         <p class="text-sm text-gray-600 font-bold">{{$vacante->empresa}}</p>
@@ -53,25 +53,5 @@
     </div>
     @push('scripts')
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-{{--        <script>--}}
-{{--            Swal.fire({--}}
-{{--                title: 'Eliminar vacante?',--}}
-{{--                text: "Una vacante eliminada no se puede recuperar!",--}}
-{{--                icon: 'warning',--}}
-{{--                showCancelButton: true,--}}
-{{--                confirmButtonColor: '#3085d6',--}}
-{{--                cancelButtonColor: '#d33',--}}
-{{--                confirmButtonText: 'Si, eliminar!',--}}
-{{--                cancelButtonText: "Cancelar"--}}
-{{--            }).then((result) => {--}}
-{{--                if (result.isConfirmed) {--}}
-{{--                    Swal.fire(--}}
-{{--                        'Eliminado',--}}
-{{--                        'Has eliminado la vacante!.',--}}
-{{--                        'success'--}}
-{{--                    )--}}
-{{--                }--}}
-{{--            })--}}
-{{--        </script>--}}
     @endpush
 </div>
