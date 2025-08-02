@@ -20,6 +20,9 @@
                         <x-nav-link :href="route('vacantes.create')" :active="request()->routeIs('vacantes.create')">
                             {{ __('Agregar Vacante') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('notificaciones.invoke')" :active="request()->routeIs('notificaciones.invoke')">
+                            {{ __('Notificaciones') }}: <span class="text-indigo-600 font-bold">{{count(Auth::user()->unreadNotifications)}}</span>
+                        </x-nav-link>
                     </div>
                 @endauth
 
