@@ -47,4 +47,10 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+
+    //Un usuario puede estar ligado a un unico candidato
+    public function candidato()
+    {
+        return $this->hasOne(Candidato::class);
+    }
 }

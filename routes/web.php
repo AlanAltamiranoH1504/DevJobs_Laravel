@@ -24,6 +24,11 @@ Route::middleware(["auth", "rol.usuario"])->group(function () {
     Route::get("/vacantes/{id}/edit", [\App\Http\Controllers\VacanteController::class, "edit"])->name("vacantes.edit");
 });
 
+//Rutas para candidatos
+Route::middleware(["auth", "rol.usuario"])->group(function () {
+   Route::get("/candidatos/vacante/{id}", [\App\Http\Controllers\CandidatoController::class, "index"])->name("candidatos.index");
+});
+
 //Rutas para notificaciones
 Route::middleware(["auth", "rol.usuario"])->group(function () {
     Route::get("/notificaciones", [\App\Http\Controllers\NotificacionController::class, "__invoke"])->name("notificaciones.invoke");

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Candidato;
+use App\Models\Vacante;
 use Illuminate\Http\Request;
 
 class CandidatoController extends Controller
@@ -10,9 +11,14 @@ class CandidatoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id_vacante)
     {
-        //
+        $vacante_with_candidatos = Vacante::with("candidatos")
+            ->where("id", $id_vacante)
+            ->first();
+        return view("candidatos.index", [
+            "vacante" => $vacante_with_candidatos
+        ]);
     }
 
     /**
