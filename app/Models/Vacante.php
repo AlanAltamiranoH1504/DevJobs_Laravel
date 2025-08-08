@@ -35,7 +35,7 @@ class Vacante extends Model
     //Un vacante puede tener varios candidatos
     public function candidatos()
     {
-        return $this->hasMany(Candidato::class, "vacante_id", "id");
+        return $this->hasMany(Candidato::class, "vacante_id", "id")->orderBy("created_at", "DESC");
     }
     //Una vacante pertence a un usuario
     public function reclutador()

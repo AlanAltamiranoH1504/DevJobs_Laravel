@@ -25,7 +25,7 @@
                                         </div>
                                         <div>
                                             <a href="{{asset($candidato->cv)}}"
-                                               class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-indigo-800 leading-5 font-medium rounded-full bg-indigo-800 font-bold">Ver
+                                               class="inline-flex items-center shadow-sm px-5 py-2 border border-indigo-800 leading-5 font-medium font-bold uppercase rounded-md text-white bg-indigo-800 hover:bg-indigo-600 transition-colors duration-500 font-bold">Ver
                                                 CV</a>
                                         </div>
                                     </li>

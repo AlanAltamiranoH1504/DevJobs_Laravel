@@ -3,9 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, "__invoke"])->name('home');
 
 //Route::get('/dashboard', [\App\Http\Controllers\VacanteController::class, "index"])->middleware(['auth', 'verified'])->name('dashboard');
 //Route::get('/vacantes/create', [\App\Http\Controllers\VacanteController::class, "index"])->middleware(['auth', 'verified'])->name('dashboard');

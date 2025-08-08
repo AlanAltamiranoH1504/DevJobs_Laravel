@@ -30,7 +30,6 @@
 - 🗃️ **MySQL** – Base de datos relacional para manejar toda la información.
 - 🖼️ **Blade** – Motor de plantillas para las vistas.
 - 🎨 **Tailwind CSS** – Framework CSS utilitario.
-- 🗃️ **MySQL** – Base de datos relacional.
 
 ---
 
@@ -43,12 +42,13 @@
 
 ---
 
-## 🚧 Estado del Proyecto
+## ✅ Estado del Proyecto
 
-> **Este proyecto se encuentra actualmente en desarrollo.**  
-> Algunas funcionalidades pueden estar incompletas o sujetas a cambios.  
-> No se recomienda su uso en entornos de producción hasta alcanzar una versión estable.
+> **Este proyecto se encuentra terminado y listo para producción.**  
+> Todas las funcionalidades principales han sido implementadas y probadas.  
+> Puedes usarlo con confianza en entornos reales.
 
+---
 
 ## ⚙️ Instalación
 
@@ -64,11 +64,11 @@ composer install
 cp .env.example .env
 php artisan key:generate
 
-# Configurar base de datos en .env y luego ejecutar:
+# Configurar base de datos en .env y luego ejecutar migraciones y seeders:
 php artisan migrate --seed
 
 # Instalar dependencias front-end
-npm install && npm run dev
+npm install && npm run build
 
 # Iniciar servidor de desarrollo
 php artisan serve
