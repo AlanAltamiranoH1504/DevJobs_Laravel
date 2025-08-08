@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Notifications\NuevoCandidato;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,6 +15,7 @@ class NotificacionController extends Controller
     public function __invoke(Request $request)
     {
         //Limpieza de notificaciones
+        $this->authorize("viewAny", Auth::user());
 
         $notificaciones = Auth::user()->unreadNotifications;
         Auth::user()->unreadNotifications->markAsRead();

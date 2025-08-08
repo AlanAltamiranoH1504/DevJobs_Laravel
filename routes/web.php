@@ -18,14 +18,14 @@ Route::middleware('auth')->group(function () {
 });
 
 //Rutas para vacantes
-Route::middleware("auth")->group(function () {
+Route::middleware(["auth", "rol.usuario"])->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\VacanteController::class, "index"])->name('dashboard');
     Route::get('/vacantes/create', [\App\Http\Controllers\VacanteController::class, "create"])->name("vacantes.create");
     Route::get("/vacantes/{id}/edit", [\App\Http\Controllers\VacanteController::class, "edit"])->name("vacantes.edit");
 });
 
 //Rutas para notificaciones
-Route::middleware("auth")->group(function () {
+Route::middleware(["auth", "rol.usuario"])->group(function () {
     Route::get("/notificaciones", [\App\Http\Controllers\NotificacionController::class, "__invoke"])->name("notificaciones.invoke");
 });
 
